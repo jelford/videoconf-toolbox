@@ -7,7 +7,7 @@ toolbox: ringcentral_x86_64.rpm zoom_x86_64.rpm Containerfile
 	toolbox create -i vctoolbox-image -c vctoolbox
 
 clean:
-	rm "*.rpm"
+	rm -f "./*.rpm"
 	podman stop -i vctoolbox
 	toolbox rm vctoolbox
 	toolbox rmi vctoolbox-image
