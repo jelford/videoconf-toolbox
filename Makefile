@@ -1,16 +1,16 @@
 
 toolbox: ringcentral_x86_64.rpm zoom_x86_64.rpm Containerfile
-	podman stop -i ringcentral
-	toolbox rm ringcentral
-	toolbox rmi ringcentral-image
-	podman build -t ringcentral-image .
-	toolbox create -i ringcentral-image -c ringcentral
+	podman stop -i vctoolbox 
+	toolbox rm vctoolbox
+	toolbox rmi vctoolbox-image
+	podman build -t vctoolbox-image .
+	toolbox create -i vctoolbox-image -c vctoolbox
 
 clean:
 	rm "*.rpm"
-	podman stop -i ringcentral
-	toolbox rm ringcentral
-	toolbox rmi ringcentral-image
+	podman stop -i vctoolbox
+	toolbox rm vctoolbox
+	toolbox rmi vctoolbox-image
 
 
 ringcentral_x86_64.rpm:
